@@ -119,9 +119,8 @@ input[type=range]{accent-color:#378ADD}
 .cv code{font-family:var(--mono);font-size:13px;background:var(--card);border:1px solid var(--line);padding:0 4px;border-radius:4px}
 .qz .ans code{background:var(--soft)}
 .cref{color:var(--accent)}
-/* 覚えるシート（2026-11-16）。赤い下線＝必ず頭に入れる・青＝見たら意味が分かればよい・灰色＝参考・黄色＝過去問で出た所と引っかけ */
 .shd{margin-top:10px}
-.sh{padding:0 2px 4px;word-break:auto-phrase}  /* 日本語を言葉の切れ目で折る（Chrome・Edge。効かないブラウザでは今までどおり） */
+.sh{padding:0 2px 4px;word-break:auto-phrase}
 .shleg{display:flex;flex-wrap:wrap;gap:2px 16px;font-size:12px;color:var(--sub);margin:0 0 10px;padding:6px 10px;border:1px dashed var(--line);border-radius:8px}
 .sh .m1{color:var(--danger);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px;font-weight:500}
 .sh .m2{color:var(--accent)}
@@ -153,9 +152,8 @@ button.shh:hover,button.shh:focus-visible{color:var(--accent);border-color:var(-
 .pt.lv-must::before{background:var(--danger);border-color:var(--danger)}
 .pt.lv-know::before{background:var(--accent);border-color:var(--accent)}
 .pt>code{margin-top:4px;font-size:13px}
-/* 物差しの意味の一覧（2026-11-18）：線の上の値と同じ順に、1行ずつ */
 .scl{margin:2px 0 6px;padding:4px 0 0 2px;display:grid;grid-template-columns:max-content minmax(0,1fr);gap:3px 10px;font-size:13.5px;line-height:1.65;align-items:baseline}
-.scr{display:contents}  /* 値の列を、一番長い値（quarantine など）にそろえる */
+.scr{display:contents}
 .scd{grid-column:1/-1;font-size:12px;color:var(--sub)}
 .scr>code{justify-self:start}
 .pt small,.chip small{font-size:12px;line-height:1.45;margin-top:2px;overflow-wrap:anywhere}
@@ -178,7 +176,6 @@ button.shh:hover,button.shh:focus-visible{color:var(--accent);border-color:var(-
 .sht.stack tr{border:1px solid var(--line);border-radius:8px;margin:0 0 6px;padding:4px 10px}.sht.stack th,.sht.stack td{border:0;padding:2px 0}
 .sht.stack tbody th{font-size:14px;border-bottom:1px solid var(--line);margin-bottom:2px}.sht.stack td::before{content:attr(data-h) '：';color:var(--sub);font-size:12px}
 .sht.stack code{white-space:normal}}
-/* メールの見た目（look。2026-11-17）：封筒（ピンク）の中に、ヘッダ（便箋）と本文（点線）を並べる */
 .shlook{margin:4px 0 6px}
 .lkenv{border:2px solid var(--lk-line,#D4537E);background:var(--lk-bg,#FBEAF0);border-radius:12px;padding:8px 12px}
 .lkhead{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:6px 10px;margin-top:8px}
@@ -188,14 +185,12 @@ button.shh:hover,button.shh:focus-visible{color:var(--accent);border-color:var(-
 .lkln{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:2px 14px;padding:6px 0;border-top:1px dashed var(--line);font-size:13px;line-height:1.7;align-items:start}
 .lkcap+.lkln{border-top:0}
 .lkln>code{background:none;border:0;padding:0;font-size:12.5px;overflow-wrap:anywhere}
-.lkp{display:block}.lkp+.lkp{margin-top:3px}  /* 意味の1行ずつ（JSON の改行） */
-.lkb{padding-left:1em;text-indent:-1em}  /* ・と → の行は、折り返した2行目を1字下げる */
+.lkp{display:block}.lkp+.lkp{margin-top:3px}
+.lkb{padding-left:1em;text-indent:-1em}
 @media (max-width:600px){.lkln{grid-template-columns:minmax(0,1fr)}}
 @media (prefers-color-scheme:dark){.lkenv{background:var(--lk-bg-d,#4B1528);border-color:var(--lk-line-d,#ED93B1)}.lkenv>.lkcap{color:var(--lk-ink-d,#F4C0D1)}}
-/* 家ごとの色（2026-11-18）：既定は S02 のピンク。S03 は緑（カードの図の「CA（発行元）」の区画と同じ）。家・おうちの1ページ・ホームのシートに data-keito が付く */
 [data-keito="S03"]{--lk-line:#1D9E75;--lk-bg:#E1F5EE;--lk-ink:#085041;--lk-ring:#5DCAA5;--lk-say:#0F6E56;--lk-bg-d:#04342C;--lk-line-d:#5DCAA5;--lk-ink-d:#9FE1CB;--lk-say-d:#9FE1CB}
-[data-keito="S09"]{--lk-line:#7F77DD;--lk-bg:#EEEDFE;--lk-ink:#3C3489;--lk-ring:#AFA9EC;--lk-say:#534AB7;--lk-bg-d:#26215C;--lk-line-d:#AFA9EC;--lk-ink-d:#CECBF6;--lk-say-d:#CECBF6}  /* S09（HTTP の家）は、カードの図で「接続する側」の区画と同じ紫 */
-/* みんなのおうち（2026-11-17）：ガーデンの区画のタブ、家の札、家を押すと移る1ページ */
+[data-keito="S09"]{--lk-line:#7F77DD;--lk-bg:#EEEDFE;--lk-ink:#3C3489;--lk-ring:#AFA9EC;--lk-say:#534AB7;--lk-bg-d:#26215C;--lk-line-d:#AFA9EC;--lk-ink-d:#CECBF6;--lk-say-d:#CECBF6}
 .gtabs{display:flex;flex-wrap:wrap;gap:6px;margin:2px 4px 8px}
 .gtabs small{font-size:inherit}
 @media (max-width:600px){.gtabs small{display:none}}
@@ -215,7 +210,6 @@ button.shh:hover,button.shh:focus-visible{color:var(--accent);border-color:var(-
 .ojump button{font-size:13px;padding:4px 10px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--accent);cursor:pointer}
 .ojump button:hover,.ojump button:focus-visible{border-color:var(--lk-line,#D4537E)}
 @media (prefers-color-scheme:dark){.house .hs{color:var(--lk-say-d,#F4C0D1)}}
-/* 攻撃手法の地下室（2026-11-18）：ガーデンの区画のタブの中の扉（石の壁のうす紫）と、扉を押すと移る1ページ。1ページの図はカードの図と同じ見た目 */
 #chika-doors{padding:8px 8px 10px;margin:0 4px 6px;border-radius:12px;background:#EFEDF3}
 .door{display:block;text-decoration:none;color:var(--text);border:1px solid var(--line);border-radius:14px;padding:8px 10px 10px;background:var(--card);text-align:center}
 .door:hover,.door:focus-visible{border-color:#534AB7;outline:none;box-shadow:0 0 0 2px #AFA9EC}
@@ -294,8 +288,6 @@ const FIG={"N01-1":{"nodes":{"pc":{"x":80,"y":200,"type":"pc","label":"PC","sub"
 const BASICS={};
 const SHEETS=[];
 const CHIKA=[];
-// 初期知識編（2026-11-14。まとまり1 より前に読む土台）。カードと同じ画面で開くので、問題・先に読む・図は QUIZ・INTRO・FIG に入れる。
-// CARDS には入れない（カード一覧の84枚の数・系統の並び・場面のカードを変えないため）。BX：番号 → [名前, 覚えること, 編の名前]
 const BX={};
 Object.values(BASICS).forEach(b=>Object.entries(b.items).forEach(([id,[nm,core]])=>{
   BX[id]=[nm,core,b.title];
@@ -303,7 +295,6 @@ Object.values(BASICS).forEach(b=>Object.entries(b.items).forEach(([id,[nm,core]]
   if(b.intro[id])INTRO[id]=b.intro[id];
   if((b.fig||{})[id])FIG[id]=b.fig[id]
 }));
-// 攻撃手法の地下室の部屋の図（2026-11-18）。カードの図と同じ形で、'room-'＋部屋の id で引く（FIG はカードと初期知識編だけのままにする）
 const RFIG={},RNAME={};
 CHIKA.forEach(r=>{
   RFIG['room-'+r.id]=r.fig;
@@ -312,14 +303,11 @@ CHIKA.forEach(r=>{
 function figOf(id){
   return FIG[id]||RFIG[id]
 }
-// カードの土台（2026-11-15。本人「必須項目の中をやるにあたって基礎が必要なのは、ハイパーリンクみたいなのしといて」）。
-// 初期知識編の項目の for（その項目が土台になるカード）を逆にたどる。BASEOF：カードの番号 → 初期知識の番号の並び（読む順）
 const BASEOF={};
 Object.values(BASICS).forEach(b=>Object.entries(b.for||{}).forEach(([bid,cs])=>cs.forEach(c=>{
   (BASEOF[c]=BASEOF[c]||[]).push(bid)
 })));
 const GT={'1':'LAN の土台','2':'IP と経路制御','3':'トランスポートとアプリ','4':'セキュリティと VPN','5':'冗長化・性能・運用'};
-// rt（ルータ）・lb（負荷分散装置）・ap（無線 AP）はネスペで足した（2026-11-19）。HALF の値は .syllabus/make_nw_garden.py の NW_HALF と同じにする
 const HALF={pc:[26,22],sw:[31,16],srv:[19,25],fw:[28,19],net:[38,22],
   user:[18,26],bad:[18,26],phone:[14,24],db:[20,24],box:[28,20],rt:[26,20],lb:[30,16],ap:[19,20]};
 const RAD={pc:26,sw:31,srv:27,fw:30,net:38,user:26,bad:26,phone:24,db:26,box:28,rt:27,lb:31,ap:22};
@@ -346,7 +334,6 @@ function txt(x,y,t,fill,anchor,p){
 function esc(t){
   return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;')
 }
-// 問題の文の書き方：`…` はコード、改行はそのまま、S09-1 のようなカード番号と B00-1 のような初期知識編の番号は押すとそれが開く
 function md(t){
   return esc(t)
     .replace(/`([^`]+)`/g,'<code>$1</code>')
@@ -418,16 +405,12 @@ function face(g,id,cx,cy,s,bad){
     fill:'none',stroke:INK,'stroke-width':1.3*s,'stroke-linecap':'round'},c));
   el('line',{x1:cx-2*s,y1:cy+6*s,x2:cx+2*s,y2:cy+6*s,stroke:INK,'stroke-width':1.2*s,'stroke-linecap':'round'},c)
 }
-// 攻撃者の絵（x, y が中心）。場面・カードの図の機器と、攻撃手法の地下室の扉・1ページで同じ絵を使う（2026-11-18 に drawNode から出した）
 function badChan(g,x,y,id){
   el('rect',{x:x-15,y:y+2,width:30,height:24,rx:11,fill:'#5F5E5A',stroke:'#444441','stroke-width':1},g);
   el('circle',{cx:x,cy:y-11,r:15,fill:'#444441'},g);
   el('circle',{cx:x,cy:y-9,r:10.5,fill:'#F1EFE8'},g);
   face(g,id,x,y-10,.55,true)
 }
-// 機器の名前から見た目の役を決める（2026-11-15。本人「権威 DNS は共通でひげ」「DNS シリーズがいつどこで見ても見た目でわかるように」
-// 「りぼんのかわいいむすめちゃんも！ DNS って2種類？ ならりぼんちゃんで」）。場面とカードの図の両方に効く。
-// auth＝権威 DNS（ひげ）／cache＝キャッシュ DNS（リボン）／dns＝名前でどちらか分からない DNS（名札だけ）／dhcp＝DHCP サーバ（名札）
 function roleOf(label){
   if(/権威\s*DNS/.test(label))return 'auth';
   if(/キャッシュ\s*DNS|リゾルバ/.test(label))return 'cache';
@@ -435,7 +418,6 @@ function roleOf(label){
   if(/DHCP/.test(label))return 'dhcp';
   return ''
 }
-// サーバの絵（x, y が中心。顔は y-9）に、名札・ひげ・リボンを足す。名札の字は絵の一部として扱う（class ntag。重なりを測る道具は字として数えない）
 function dressNode(g,x,y,role){
   if(!role)return;
   el('rect',{x:x-15,y:y+3,width:30,height:12,rx:4,fill:'#FFFFFF',stroke:'#888780','stroke-width':.8,'data-acc':'tag'},g);
@@ -515,9 +497,8 @@ function drawNode(k,n,par){
     el('ellipse',{cx:x,cy:y-16,rx:20,ry:6,fill:'#FFFFFF',stroke:'#888780','stroke-width':1},g);
     face(g,k,x,y+3,.7)
   }
-  // ルータ（2026-11-19）：円柱を横から見た形。上の面に、入る矢印2本と出る矢印2本
   else if(ty==='rt'){
-    el('ellipse',{cx:x,cy:y+14,rx:26,ry:6,fill:'#D6E9F8',stroke:'#378ADD','stroke-width':1},g);  // 下の楕円を先に描き、上半分を胴で隠す
+    el('ellipse',{cx:x,cy:y+14,rx:26,ry:6,fill:'#D6E9F8',stroke:'#378ADD','stroke-width':1},g);
     el('rect',{x:x-26,y:y-10,width:52,height:24,fill:'#D6E9F8'},g);
     el('line',{x1:x-26,y1:y-10,x2:x-26,y2:y+14,stroke:'#378ADD','stroke-width':1},g);
     el('line',{x1:x+26,y1:y-10,x2:x+26,y2:y+14,stroke:'#378ADD','stroke-width':1},g);
@@ -529,7 +510,6 @@ function drawNode(k,n,par){
     });
     face(g,k,x,y+4,.72)
   }
-  // 負荷分散装置（2026-11-19）：横長の箱。右に、1本が3本に分かれる矢印
   else if(ty==='lb'){
     el('rect',{x:x-30,y:y-16,width:60,height:32,rx:10,fill:'#FCE9C8',stroke:'#D08A1E','stroke-width':1},g);
     const ar={fill:'none',stroke:'#D08A1E','stroke-width':1.3,'stroke-linecap':'round','stroke-linejoin':'round'};
@@ -537,7 +517,6 @@ function drawNode(k,n,par){
     [-8,0,8].forEach(dy=>el('path',Object.assign({d:`M${x+13} ${y} L${x+23} ${y+dy} M${x+20} ${y+dy-2.6} L${x+23} ${y+dy} L${x+20} ${y+dy+2.6}`},ar),g));
     face(g,k,x-11,y-1,.7)
   }
-  // 無線 AP（2026-11-19）：小さい箱の上に、電波の弧2本
   else if(ty==='ap'){
     el('rect',{x:x-18,y:y-3,width:36,height:22,rx:9,fill:'#FFFFFF',stroke:'#1D9E75','stroke-width':1},g);
     el('circle',{cx:x,cy:y-7,r:2,fill:'#1D9E75'},g);
@@ -550,7 +529,7 @@ function drawNode(k,n,par){
     [[-20,-12],[14,-12]].forEach(([dx,dy])=>el('circle',{cx:x+dx,cy:y+dy,r:2,fill:'#1D9E75'},g));
     face(g,k,x,y,.72)
   }
-  if(ty==='srv')dressNode(g,x,y,roleOf(label));  // 名前（txt）より前に描く。カードの図は、最後の子を名前として扱うため
+  if(ty==='srv')dressNode(g,x,y,roleOf(label));
   const hh=HALF[ty][1];
   txt(x,n.labelPos==='above'?y-hh-9:y+hh+15,label,'#444441','middle',g);
   return g
@@ -609,7 +588,7 @@ function buildScene(){
     $('steps').appendChild(b)
   });
   view='all';
-  si=0;  // 前の場面の手順の番号が残っていると、手順の少ない場面（3・5・12）を開くときに止まるため（2026-11-16）
+  si=0;
   setMode(1);
   setStep(0)
 }
@@ -885,13 +864,9 @@ function openScene(id){
 $('pause').onclick=()=>setPause(!paused);
 const GARDEN={'1':['sw',150,402,'L2 スイッチ'],'2':['net',300,250,'ルータと WAN'],'3':['srv',450,402,'DNS・Web サーバ'],
   '4':['fw',620,250,'ファイアウォール'],'5':['pc',760,402,'運用の PC']};
-// みんなのおうちのキャラ（2026-11-17。本人「はっぴーがーでんのなかにメールの見た目のおぼえてほしいなてきなメールちゃんがいてほしい」→ 案1。
-// 「まとまりけいががーでん　おうちは個々に注力したおぼえるべきこと」で、ガーデンから、ガーデンの下の「みんなのおうち」へ移した）。
-// 系統 → [形, 名前, 吹き出し, 押すと開くもの]。その系統の覚えるシートに見た目（look）の区画があるときだけ、家を出す。
-// S03 の証明書ちゃん（2026-11-18。本人「お願いよろしく」：証明書の欄の案と、名前・吹き出し・緑）。名前は同じ日に漢字にした（本人「証明書はかんじにしてって」。S09 は「３あんだと応答がいちばん」で、おへんじちゃんから応答ちゃんに）。形の絵は CHAN、家の屋根の色は HOUSEC
 const BUDDY={'S02':['mail','メールちゃん','わたしの見た目、おぼえてほしいな','メールの覚えること'],
   'S03':['cert','証明書ちゃん','わたしの欄、1つずつ確かめてね','証明書の見た目'],
-  'S09':['resp','応答ちゃん','わたし、ブラウザにお願いしてるの','HTTP の応答の見た目']};  // 2026-11-18。本人「そのあとHTTPのやつも作成して」
+  'S09':['resp','応答ちゃん','わたし、ブラウザにお願いしてるの','HTTP の応答の見た目']};
 function scenesOf(g){
   return SCENES.filter(s=>s.group===g)
 }
@@ -951,7 +926,6 @@ function drawGarden(){
     })
   })
 }
-// メールちゃん：カードの図でメールを表す封筒と同じピンクの封筒に、顔と手（x, y が封筒の中心）
 function mailChan(g,x,y,id){
   [-1,1].forEach(sd=>el('ellipse',{cx:x+sd*33,cy:y+2,rx:6,ry:4.2,fill:'#FBEAF0',stroke:'#D4537E','stroke-width':1.2,
     transform:'rotate('+(-30*sd)+' '+(x+sd*33)+' '+(y+2)+')'},g));
@@ -960,7 +934,6 @@ function mailChan(g,x,y,id){
   el('path',{d:'M'+x+' '+(y-1)+' c-3 -4 -8 -1 -4 3 l4 4 l4 -4 c4 -4 -1 -7 -4 -3z',fill:'#D4537E'},g);
   face(g,id,x,y+8,.8,false)
 }
-// 証明書ちゃん：欄の線がある紙に、CA の赤いはんこ（x, y が紙の中心）。緑は、カードの図の「CA（発行元）」の区画と同じ
 function certChan(g,x,y,id){
   [-1,1].forEach(sd=>el('ellipse',{cx:x+sd*27,cy:y+4,rx:6,ry:4.2,fill:'#E1F5EE',stroke:'#1D9E75','stroke-width':1.2,
     transform:'rotate('+(-30*sd)+' '+(x+sd*27)+' '+(y+4)+')'},g));
@@ -971,7 +944,6 @@ function certChan(g,x,y,id){
   el('circle',{cx:x+14,cy:y+15,r:2.8,fill:'#E24B4A'},g);
   face(g,id,x,y+3,.75,false)
 }
-// 応答ちゃん：HTTP の応答の紙（上にヘッダの線、点線の空行、下にボディの線）に顔、頭に「200」の札（x, y が紙の中心）
 function respChan(g,x,y,id){
   [-1,1].forEach(sd=>el('ellipse',{cx:x+sd*27,cy:y+4,rx:6,ry:4.2,fill:'#EEEDFE',stroke:'#7F77DD','stroke-width':1.2,
     transform:'rotate('+(-30*sd)+' '+(x+sd*27)+' '+(y+4)+')'},g));
@@ -980,20 +952,19 @@ function respChan(g,x,y,id){
   el('line',{x1:x-16,y1:y-11,x2:x+12,y2:y-11,stroke:'#AFA9EC','stroke-width':2.2,'stroke-linecap':'round'},g);
   el('line',{x1:x-18,y1:y-5,x2:x+18,y2:y-5,stroke:'#AFA9EC','stroke-width':1.2,'stroke-dasharray':'2 2'},g);
   el('line',{x1:x-14,y1:y+17,x2:x+14,y2:y+17,stroke:'#AFA9EC','stroke-width':2.2,'stroke-linecap':'round'},g);
-  el('rect',{x:x+7,y:y-24,width:20,height:10,rx:3,fill:'#534AB7'},g);  // 1ページの見出しの小さな絵（上の端が y-24）に収まる高さ
+  el('rect',{x:x+7,y:y-24,width:20,height:10,rx:3,fill:'#534AB7'},g);
   const t=el('text',{x:x+17,y:y-16.6,'text-anchor':'middle',fill:'#FFFFFF',style:'font-size:7.5px;font-weight:600'},g);
   t.textContent='200';
   face(g,id,x,y+4,.75,false)
 }
 const CHAN={mail:mailChan,cert:certChan,resp:respChan};
-const HOUSEC={mail:['#ED93B1','#D4537E'],cert:['#5DCAA5','#1D9E75'],resp:['#AFA9EC','#7F77DD']};  // 家の屋根の [地, 線]
+const HOUSEC={mail:['#ED93B1','#D4537E'],cert:['#5DCAA5','#1D9E75'],resp:['#AFA9EC','#7F77DD']};
 function buddies(){
   return Object.entries(BUDDY).map(([k,v])=>{
     const s=SHEETS.find(z=>z.keito===k),sec=s&&s.secs.find(c=>c.blocks.some(b=>b.look));
     return sec?{k,kind:v[0],name:v[1],say:v[2],go:v[3],s,sec}:null
   }).filter(Boolean)
 }
-// 家の絵（200×150）：屋根と壁と窓の前に、キャラが立つ
 function houseSvg(kind,id){
   const svg=document.createElementNS(NS,'svg');
   svg.setAttribute('viewBox','0 0 200 150');
@@ -1008,11 +979,10 @@ function houseSvg(kind,id){
   if(CHAN[kind])CHAN[kind](svg,100,112,id);
   return svg
 }
-// ---- みんなのおうち（ガーデンの区画の「みんなのおうち」のタブの中）。家を押すと、1ページの画面（#ouchi-系統）に移る
 function drawHouses(){
   const box=$('houses'),bs=buddies();
   box.innerHTML='';
-  $('tab-ouchi').hidden=!bs.length;  // 家が無ければおうちのタブを出さない（タブの列を出すかは fixTabs）
+  $('tab-ouchi').hidden=!bs.length;
   if(!bs.length)return;
   box.innerHTML='<div class="legend" style="margin:2px 4px 8px">ガーデンは、まとまりごとの流れ。'+
     'おうちには、系統ごとに、覚えてほしいことを持ったキャラが住んでいます。おうちを押すと、その系統の覚えるシートが、見た目の区画を先頭にして1ページで開きます（中身はホームの覚えるシートと同じ）</div>';
@@ -1023,7 +993,7 @@ function drawHouses(){
     a.className='house';
     a.href='#ouchi-'+b.k;
     a.dataset.buddy=b.k;
-    a.dataset.keito=b.k;  // 家ごとの色（style.css の [data-keito]）
+    a.dataset.keito=b.k;
     a.addEventListener('click',()=>{ouchiY[b.k]=0});
     a.appendChild(houseSvg(b.kind,'bud-'+b.k));
     a.insertAdjacentHTML('beforeend','<div class="hn">'+esc(b.name)+'のおうち</div><div class="hs">「'+esc(b.say)+'」</div><div class="hg">'+esc(b.go)+' ▶</div>');
@@ -1031,10 +1001,8 @@ function drawHouses(){
   });
   box.appendChild(g)
 }
-// おうちの1ページ（重ねる画面にしない。本人「ポップアップ系だとみづらい」）：その系統の覚えるシートを全部、見た目（look）の区画を先頭にして出す
-// （2026-11-18。本人「そこにめーるけい包括させたかった」「答えもれは全部OK」。前は見た目の区画だけで、解く前の入り口にしないためだった）。「← みんなのおうちへ」か、ブラウザの戻るで、ホームのその家に戻る
 let ouchiBack=null;
-const ouchiY={};  // 家ごとの、離れたときの位置（家の札を押して入ったときは一番上から）
+const ouchiY={};
 function openOuchi(k){
   const b=buddies().find(x=>x.k===k);
   if(!b){
@@ -1048,12 +1016,11 @@ function openOuchi(k){
   $('layout').style.display='none';
   $('chika').style.display='none';
   chikaBack=null;
-  const o=$('ouchi'),secs=[b.sec].concat(b.s.secs.filter(c=>c!==b.sec));  // 見た目の区画を先頭に
-  o.dataset.keito=k;  // 家ごとの色（style.css の [data-keito]）
+  const o=$('ouchi'),secs=[b.sec].concat(b.s.secs.filter(c=>c!==b.sec));
+  o.dataset.keito=k;
   o.innerHTML='<a class="obk" href="#home">← みんなのおうちへ</a>'+
     '<div class="cv-sub"><span class="badge" style="background:var(--lk-bg,#FBEAF0);color:var(--lk-ink,#72243E)">みんなのおうち</span>'+esc(b.name)+'｜'+esc(b.s.title.replace(/^覚えるシート（(.+)）$/,'$1'))+'</div>'+
     '<h2 class="otitle"></h2>'+
-    // 区画へ飛ぶ目次（2026-11-18。critic：区画を全部出すとページが長くなり、目当ての区画を探し直すことになる）
     (secs.length>1?'<nav class="ojump" aria-label="区画へ飛ぶ">'+secs.map((c,i)=>'<button type="button" data-jump="'+i+'">'+esc((c.card?c.card+' ':'')+c.head.replace(/（[^）]*）$/,''))+'</button>').join('')+'</nav>':'')+
     '<div class="card"><div class="sh"><div class="legend" style="margin:0 0 6px">'+esc(b.s.lead)+'</div>'+SHLEG+
     '<div class="shg">'+secs.map(shSec).join('')+'</div></div></div>'+
@@ -1067,19 +1034,16 @@ function openOuchi(k){
   h.appendChild(document.createTextNode(b.name+'のおうち'));
   o.style.display='';
   ouchiBack=k;
-  window.scrollTo({top:ouchiY[k]||0});  // カードから場面へ行って、ブラウザの戻るで来たときは、読んでいた位置に戻す
+  window.scrollTo({top:ouchiY[k]||0});
   o.querySelector('.obk').focus({preventScroll:true})
 }
-// ガーデンとみんなのおうちのタブ（2026-11-17。本人「せきゅのハッピーガーデンのところでおうちとガーデン切り替えたい」「たぶてきなかんじとか？」）。
-// 選んだ方だけを同じ場所に出す。最初はガーデン。アプリを開いているあいだは、選んだタブを覚える
-// 攻撃手法の地下室のタブ（2026-11-18）を足して3つにした。← → は、出ているタブを順に回る
 const HTABS=[['garden','pane-garden'],['ouchi','houses'],['chika','chika-doors']];
 let homeTab='garden';
 function tabsOn(){
   return HTABS.map(([k])=>k).filter(k=>!$('tab-'+k).hidden)
 }
 function fixTabs(){
-  $('gtabs').hidden=tabsOn().length<2  // ガーデンのほかにタブが無ければ、タブの列を出さない
+  $('gtabs').hidden=tabsOn().length<2
 }
 function setHomeTab(t){
   if($('gtabs').hidden||!tabsOn().includes(t))t='garden';
@@ -1102,11 +1066,6 @@ $('gtabs').addEventListener('keydown',e=>{
   setHomeTab(on[(i+(e.key==='ArrowRight'?1:on.length-1))%on.length]);
   $('tab-'+homeTab).focus()
 });
-// ---- 攻撃手法の地下室（2026-11-18。本人「なんとなく理解はしているけど、セッションふぃくせーしょんがいまいち理解していない可能性がある」
-// 「べつチャットでセキュリティガーデンに攻撃手法の地下室タブを追加してせっしょんふぃくせーしょんを入れて」）。
-// ガーデンの区画の「攻撃手法の地下室」のタブの中に、攻撃の手口1つにつき扉を1枚置く。扉を押すと、1ページの画面（#chika-部屋の id）に移る。
-// 部屋の中身は src/chika/C??.json（形は make_garden.py の check_chika）。1ページは、頭の説明と動く図（カードの図と同じ見た目）・
-// 覚えるシートと同じ区画・カードの問題へのボタン。「← 攻撃手法の地下室へ」か、ブラウザの戻るで、地下室のタブのその扉に戻る
 function doorSvg(id){
   const svg=document.createElementNS(NS,'svg');
   svg.setAttribute('viewBox','0 0 200 150');
@@ -1114,15 +1073,15 @@ function doorSvg(id){
   svg.setAttribute('aria-hidden','true');
   el('rect',{x:0,y:0,width:200,height:150,rx:10,fill:'#DCD8E4'},svg);
   [[8,10,40,18],[52,10,10,18],[140,10,52,18],[8,32,26,18],[156,32,36,18],[8,54,14,18],[160,54,32,18],[8,76,40,18],[146,76,46,18],[8,98,30,18]]
-    .forEach(([x,y,w,h])=>el('rect',{x,y,width:w,height:h,rx:4,fill:'#CFC9DA'},svg));  // 石の壁
+    .forEach(([x,y,w,h])=>el('rect',{x,y,width:w,height:h,rx:4,fill:'#CFC9DA'},svg));
   el('rect',{x:0,y:124,width:200,height:26,rx:6,fill:'#BFB6A6'},svg);
   el('path',{d:'M66 126 L66 56 Q66 26 100 26 Q134 26 134 56 L134 126Z',fill:'#A07A4C',stroke:'#6E4E2A','stroke-width':2,'stroke-linejoin':'round'},svg);
   [[83,33],[100,27],[117,33]].forEach(([x,y])=>el('line',{x1:x,y1:y,x2:x,y2:125,stroke:'#6E4E2A','stroke-width':1,opacity:.5},svg));
   el('circle',{cx:124,cy:86,r:3.5,fill:'#FAC775',stroke:'#6E4E2A','stroke-width':1},svg);
-  el('line',{x1:40,y1:34,x2:40,y2:46,stroke:'#6E4E2A','stroke-width':2},svg);  // ランプ
+  el('line',{x1:40,y1:34,x2:40,y2:46,stroke:'#6E4E2A','stroke-width':2},svg);
   el('circle',{cx:40,cy:55,r:16,fill:'#FAC775',opacity:.35},svg);
   el('rect',{x:34,y:46,width:12,height:16,rx:4,fill:'#FAC775',stroke:'#BA7517','stroke-width':1},svg);
-  badChan(svg,160,100,id);  // 扉の横から、ID の札を持った攻撃者がのぞく
+  badChan(svg,160,100,id);
   el('rect',{x:126,y:108,width:22,height:13,rx:3,fill:'#FFE38A',stroke:'#BA7517','stroke-width':1},svg);
   const t=el('text',{x:137,y:117.5,'text-anchor':'middle',fill:INK,style:'font-size:9px;font-weight:600'},svg);
   t.textContent='ID';
@@ -1131,7 +1090,7 @@ function doorSvg(id){
 function drawChika(){
   const box=$('chika-doors');
   box.innerHTML='';
-  $('tab-chika').hidden=!CHIKA.length;  // 部屋が無ければ地下室のタブを出さない
+  $('tab-chika').hidden=!CHIKA.length;
   if(!CHIKA.length)return;
   box.innerHTML='<div class="legend" style="margin:2px 4px 8px">地下室には、攻撃の手口が1部屋に1つずつ住んでいます。'+
     '扉を押すと、その手口の仕組み（動く図）と対策が1ページで開きます</div>';
@@ -1177,12 +1136,12 @@ function openChika(id){
   h.appendChild(ic);
   h.appendChild(document.createTextNode(r.name));
   o.style.display='';
-  initFigs(o);  // 見えてから描く（札を置く所を、字の大きさで測るため）
+  initFigs(o);
   chikaBack=id;
   window.scrollTo({top:0});
   o.querySelector('.obk').focus({preventScroll:true})
 }
-$('ouchi').addEventListener('click',e=>{  // おうちの1ページでも、区画の見出しと文の中のカード番号でカードを開く（2026-11-18。シートを全部出すようにしたため）
+$('ouchi').addEventListener('click',e=>{
   const j=e.target.closest('[data-jump]');
   if(j){
     const s=$('ouchi').querySelectorAll('.shsec')[+j.dataset.jump];
@@ -1194,7 +1153,7 @@ $('ouchi').addEventListener('click',e=>{  // おうちの1ページでも、区�
   e.preventDefault();
   openCard(t.getAttribute('data-card'),t)
 });
-$('chika').addEventListener('click',e=>{  // 区画の見出し・文の中のカード番号・問題のボタンで、カードを開く
+$('chika').addEventListener('click',e=>{
   const t=e.target.closest('[data-card]');
   if(!t)return;
   e.preventDefault();
@@ -1218,7 +1177,6 @@ function showHome(){
   drawCardList();
   window.scrollTo({top:0})
 }
-// ---- 初期知識編の一覧（ガーデンの上と、カード一覧の まとまり1 の上に出す。押すとカードと同じ画面で開く）
 function basicsGrid(b){
   const g=document.createElement('div');
   g.className='clg';
@@ -1232,8 +1190,6 @@ function basicsGrid(b){
   });
   return g
 }
-// 編ごとに畳む（2026-11-15。編が増えて、ホームのガーデンが下へ押し出されるため）。最初は閉じる。
-// 開いた編は、描き直しても開いたまま（ホームとカード一覧は別々に覚える）。lead：編の説明を中に出すか
 const bxOpen={};
 function basicsFold(b,where,lead){
   const d=document.createElement('details'),key=where+':'+b.keito;
@@ -1263,10 +1219,6 @@ function drawBasics(){
   bs.forEach(b=>box.appendChild(basicsFold(b,'home',true)));
   SHEETS.forEach(s=>box.appendChild(sheetFold(s)))
 }
-// ---- 覚えるシート（2026-11-16。本人「ガーデンのホームに、セキュガーデン風の見た目でまとめる表を作ってほしい」）。
-// 初期知識編の下に、系統ごとに畳んで出す（最初は閉じる。開いたシートは、描き直しても開いたまま）。
-// 文の中の !!…!!＝必ず頭に入れる（赤い下線）、++…++＝見たら意味が分かればよい（青）、` はコード、S02-1 の形はカードへのリンク。
-// 物差し（scale）＝順番に意味がある値を、横1段の線に左から弱い順に並べる。札（chips）＝順番に意味が無い値を、格子に並べる
 const SHLV={must:'lv-must',know:'lv-know',ref:'lv-ref'};
 function shMd(t){
   return esc(t)
@@ -1283,8 +1235,6 @@ function shBlock(b){
   if(k==='li')return '<div class="shli">'+shMd(v)+'</div>';
   if(k==='ref')return '<div class="shli shref">参考：'+shMd(v)+'</div>';
   if(k==='memo')return '<div class="shmemo"><span class="lb">過去問・引っかけ</span>'+shMd(v)+'</div>';
-  // メールの見た目（2026-11-17）：封筒の中に、ヘッダと本文をこの順に並べて描く（ヘッダと本文は空行で分かれた並びで、入れ子ではない）。1行は [中身, 意味, 重要度]（中身はコードの字。中の !!…!! は効く）
-  // 意味の中の改行で、1つずつの行に分ける（2026-11-18。本人「もじもじしてるからわかりづらいのかも／改行が少なかったりして」）。・か → で始まる行は、折り返しを字下げしてそろえる
   if(k==='look'){
     const mn=t=>t.split('\n').map(x=>'<span class="lkp'+(/^[・→]/.test(x)?' lkb':'')+'">'+shMd(x)+'</span>').join('');
     const ln=p=>'<div class="lkln'+(p[2]?' '+SHLV[p[2]]:'')+'"><code>'+shMd(p[0])+'</code><span>'+mn(p[1])+'</span></div>';
@@ -1292,8 +1242,6 @@ function shBlock(b){
     return '<div class="shlook">'+part('env',v.env,part('head',v.head)+part('body',v.body))+'</div>'
   }
   const cap='<div class="shcap">'+shMd(v.cap)+'</div>';
-  // 物差しの線の上には値だけを置き、意味は線の下の一覧に1行ずつ出す（2026-11-18。本人「若干見づらい」「右側部分の改行かな？」：
-  // 2列に並ぶシートの右の列だと、点1つの幅が 90px ほどになり、意味が言葉の途中で3行に折れていた）
   if(k==='scale'){
     const lv=p=>p[2]==='know'||p[2]==='ref'?SHLV[p[2]]:SHLV.must;
     return cap+'<div class="shsc"><span class="lo">'+esc(v.lo)+'</span><div class="trk">'+
@@ -1301,7 +1249,6 @@ function shBlock(b){
       '<div class="scl"><div class="scd">上から下へ：'+esc(v.lo)+' → '+esc(v.hi)+'</div>'+v.pts.map(p=>'<div class="scr '+lv(p)+'"><code>'+esc(p[0])+'</code><span>'+shMd(p[1])+'</span></div>').join('')+'</div>'
   }
   if(k==='chips')return cap+'<div class="shch">'+v.items.map(p=>shVal(p).replace('<div class="','<div class="chip ')).join('')+'</div>';
-  // 3列以上の表は、狭い画面では行ごとの箱に組み替える（列の名前を data-h に持たせて、升の頭に出す）
   return cap+'<div class="shtw"><table class="sht'+(v.head.length>2?' stack':'')+'"><thead><tr>'+v.head.map(h=>'<th>'+shMd(h)+'</th>').join('')+'</tr></thead><tbody>'+
     v.rows.map(r=>'<tr>'+r.map((x,i)=>i?'<td data-h="'+esc(v.head[i]).replace(/"/g,'&quot;')+'">'+shMd(x)+'</td>':'<th scope="row">'+shMd(x)+'</th>').join('')+'</tr>').join('')+'</tbody></table></div>'
 }
@@ -1337,7 +1284,6 @@ function sheetFold(s){
   d.appendChild(b);
   return d
 }
-// ---- カード一覧（ガーデンの下）
 let clFilter='all';
 function drawCardList(){
   const body=$('cl-body');
@@ -1359,7 +1305,6 @@ function drawCardList(){
     f.appendChild(b)
   });
   const ok=pr=>clFilter==='all'||(clFilter==='must'?pr==='必須':pr==='必須'||pr==='推奨');
-  // 初期知識編は優先が無いので、絞り込みに関係なく、まとまり1 の上に出す
   Object.values(BASICS).forEach(b=>body.appendChild(basicsFold(b,'list',false)));
   let lastM='';
   KEITO.forEach(([k,name,m])=>{
@@ -1391,11 +1336,8 @@ function drawCardList(){
     body.appendChild(g)
   })
 }
-// ---- カードの図（2026-11-14。先に読むの中と、問題の「答えを見る」の中に出す。機器は場面と同じ絵で、手順のボタンで送って見る）
-// 文の書き方は md と同じに加えて、==…== は「その区間で替わった値」、{{…}} は「そのまま」の印
 const MIC='<svg width="22" height="22" viewBox="0 0 28 28" aria-hidden="true"><rect x="10" y="3" width="8" height="14" rx="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M6 13a8 8 0 0 0 16 0M14 21v4M10 25h8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>';
 function figMd(t){
-  // コード（` で囲んだ所）の中の == や {{ }} は、そのまま字として出す。==`M-X`== のように、印でコードを囲むのはよい
   const kept=[];
   return md(t).replace(/<code>.*?<\/code>/g,m=>'\u0000'+(kept.push(m)-1)+'\u0000')
     .replace(/==(.+?)==/g,'<span class="chg">$1</span>').replace(/\{\{(.+?)\}\}/g,'<span class="keep">$1</span>')
@@ -1405,9 +1347,6 @@ function figH(f){
   const b=(f.zones||[]).map(z=>z[1]+z[3]);
   return (b.length?Math.max(...b):330)+10
 }
-// 答えの図は、問ごとに持てる（2026-11-15。本人「セキュリティガーデンの見た目で作ってほしかった」：S01-4 の問2 の図）。
-// answer は {q, steps} か、その並び。part は 'intro' か 'a'＋問の番号。機器の並び（nodes・zones・edges・notes）を持つ答えの図は、
-// 先に読むの図とは別の図として描き、手順の番号も1から数える。機器の並びを持たない答えの図は、先に読むの図の続き（1つまで）
 function figAnswers(f){
   return Array.isArray(f.answer)?f.answer:(f.answer?[f.answer]:[])
 }
@@ -1430,11 +1369,9 @@ function figHtml(id,part){
   if(!st.length)return '';
   return '<div class="fig" data-fig="'+esc(id)+'" data-part="'+part+'"'+(RFIG[id]?' data-room="1"':'')+'>'+
     '<span class="lb">'+(part==='intro'?'図で見る':'図で確かめる')+'（手順のボタンで進む。目を閉じている機器は、その手順では通らない）</span>'+
-    // カードの図は、狭い画面で字が潰れないよう、横に動かせる枠に入れる（.figsc。幅は style.css。2026-11-20）。地下室の部屋の図は今のまま
     (RFIG[id]?'':'<div class="figsc">')+
     '<svg class="figsvg" width="100%" viewBox="0 0 '+(f.w||680)+' '+figH(figView(f,part))+'" role="img" aria-label="'+esc(RNAME[id]||id)+' の図"></svg>'+
     (RFIG[id]?'':'</div>')+
-    // 狭い画面だけ、図を横に動かせることを知らせ、手順のボタンを指で押しやすい 44px 以上にする（.figsch と .figrow button。style.css。2026-11-20）
     (RFIG[id]?'':'<span class="figsch">図は横に動かせる（指で左右になぞる）</span>')+
     '<div class="figrow">'+st.map((s,i)=>'<button data-i="'+i+'" aria-pressed="false">'+esc(s.pill)+'</button>').join('')+'</div>'+
     '<div class="box figbox"><div style="flex:none;color:var(--warn);padding-top:2px">'+MIC+'</div>'+
@@ -1443,7 +1380,7 @@ function figHtml(id,part){
 function initFigs(root){
   root.querySelectorAll('.fig').forEach(box=>{
     const id=box.dataset.fig,part=box.dataset.part,F=figOf(id),f=figView(F,part),st=figSteps(F,part),g=box.querySelector('svg');
-    const pre=(box.dataset.room?'fr':'f'+part[0])+'-';  // fi-・fa-・fr-（地下室の部屋）：場面の機器の id（n-pc・fo-pc など）とぶつけない
+    const pre=(box.dataset.room?'fr':'f'+part[0])+'-';
     (f.zones||[]).forEach(([x,y,w,h,fill,label,lc])=>{
       el('rect',{x,y,width:w,height:h,rx:22,fill},g);
       if(label)txt(x+14,y+20,label,lc,'start',g)
@@ -1456,7 +1393,7 @@ function initFigs(root){
     });
     Object.entries(f.nodes).forEach(([k,n])=>{
       const nd=drawNode(pre+k,{x:n.x,y:n.y,type:n.type,label:n.label},g),lb=nd.lastChild,hh=HALF[n.type][1],sub=n.sub||[];
-      nd.setAttribute('class','fnd');  // 場面の機器（.nd）と違い、押しても何も起きないので、押せる形のカーソルにしない
+      nd.setAttribute('class','fnd');
       if(n.lp==='above'){
         const top=n.y-hh-(n.type==='sw'&&/L3/.test(n.label)?5:0);
         lb.setAttribute('y',top-8-15*sub.length);
@@ -1474,14 +1411,13 @@ function initFigs(root){
         const y=o.y+36+19*j;
         if(hi.includes(j))el('rect',{x:o.x+4,y:y-13,width:o.w-8,height:18,rx:4,fill:'#FAEEDA'},ng);
         const t=txt(o.x+10,y,r,hi.includes(j)?'#A32D2D':INK,'start',ng);
-        // 札の行は空白で桁をそろえることがあるので、続く空白を詰めずに描く（2026-11-19。SVG の text は既定で空白を1つに詰める）
         t.setAttribute('style','font-family:var(--mono);font-size:13px;white-space:pre');
         t.setAttributeNS('http://www.w3.org/XML/1998/namespace','xml:space','preserve')
       })
     }
     const mk=el('g',{style:'display:none'},g);
     const mr=el('rect',{height:22,rx:11,'stroke-width':.6},mk);
-    const mtl=el('path',{'stroke-width':.6},mk);  // 吹き出し（kind が think）のしっぽ
+    const mtl=el('path',{'stroke-width':.6},mk);
     const mt=el('text',{'font-size':12,'text-anchor':'middle','dominant-baseline':'central'},mk);
     const ball=el('g',{style:'display:none'},g);
     const env=el('rect',{x:-13,y:-9,width:26,height:18,rx:4,'stroke-width':1},ball);
@@ -1494,14 +1430,13 @@ function initFigs(root){
     const cp=el('g',{style:'display:none'},g);
     const cr=el('rect',{height:22,rx:11,'stroke-width':.6},cp);
     const ct=el('text',{'font-size':12,'text-anchor':'middle','dominant-baseline':'central'},cp);
-    // 区間の札を置かない所（字・札・機器の形）。fixedObs は手順で変わらないもの、stepObs はその手順で見えている札と印
-    const VH=g.viewBox.baseVal.height,VW=g.viewBox.baseVal.width;  // 図の幅（カードの図は 680、地下室の部屋の縦長の図は 400。2026-11-18）
+    const VH=g.viewBox.baseVal.height,VW=g.viewBox.baseVal.width;
     let fixedObs=null,stepObs=[];
     function bbox(e){
       try{
         const b=e.getBBox();
         return b.width?[b.x,b.y,b.x+b.width,b.y+b.height]:null
-      }catch(_){return null}  // 見えていない図（閉じた答え）では測れない
+      }catch(_){return null}
     }
     function fixObs(){
       const o=[];
@@ -1515,13 +1450,8 @@ function initFigs(root){
         const [hw,hh]=HALF[n.type];
         o.push({r:[n.x-hw,n.y-hh,n.x+hw,n.y+hh],n})
       });
-      return ok?o:null  // 測れなかったら、次に見えたときに測り直す
+      return ok?o:null
     }
-    // 区間の札を、封筒から見てどこに出すか（[横, 縦] のずれ）を、区間の行き先 B に止まったときの位置で選ぶ。
-    // まず上（名前を上に書いた機器や図の上の端では下）。字・札・ほかの機器にかかるなら、反対側・真横・斜め・少し遠くの順に空いている所を探す。
-    // 選ぶのは、同じ字の札が続く区間のまとまりの初めの1回だけ（下の fr）。動くたびに選び直すと、札が上・下・横と行ったり来たりする
-    // （2026-11-15 に本人「行ったり来たり動くの気になる」）
-    // extra（地下室の部屋の図だけ。2026-11-18）：ほかによける所（封筒の通り道）
     function pick(B,lb,extra){
       const w=wlen(lb),up=B.y<70||B.lp==='above',d0=up?30:-28,d1=up?-28:30,sx=w/2+18,sl=w/2+RAD[B.type]+6;
       const obs=(fixedObs||[]).filter(o=>o.n!==B).concat(stepObs,extra||[]);
@@ -1539,8 +1469,6 @@ function initFigs(root){
       }
       return [best.dx,best.dy]
     }
-    // 地下室の部屋の図の札（2026-11-18。本人「しゅうせいして問題をなくしてからコミットして」：封筒について動く札が、動き出しと途中で機器の名前にかかっていた）。
-    // 札は封筒について動かさず、区間ごとに、線の真ん中の脇の、名前・札・機器・封筒の通り道にかからない所に置いたままにする。返すのは札の真ん中の位置
     function fixAt(A,B,lb){
       const M={x:(A.x+B.x)/2,y:(A.y+B.y)/2,type:'box'},way=[];
       for(let q=0;q<=1;q+=.05){
@@ -1552,7 +1480,6 @@ function initFigs(root){
     }
     function put(x,y,lb,d){
       ball.setAttribute('transform','translate('+x.toFixed(1)+','+y.toFixed(1)+')');
-      // 札は、選んだずれ d のまま封筒について動く。図の端では、はみ出さないように寄せる
       const w=wlen(lb),lx=Math.min(Math.max(x+d[0],w/2+4),VW-4-w/2),ly=Math.min(Math.max(y+d[1],13),VH-13);
       cr.setAttribute('x',lx-w/2);
       cr.setAttribute('y',ly-11);
@@ -1563,15 +1490,13 @@ function initFigs(root){
     }
     const cont=figAnswers(F).find(a=>!a.nodes),n0=(F.intro||[]).length;
     const off=part==='intro'||f.own?0:n0,tot=f.own?st.length:n0+(cont?(cont.steps||[]).length:0);
-    // 動かすのは、カードが開いていて、図が見えているあいだだけ（カードを閉じても cv-body は残り、答えの図は閉じた details の中に残るため）。
-    // カードの外の図（地下室の1ページ。2026-11-18）は、その画面が出ているあいだだけ
     const det=box.closest('details'),inCv=$('cv').contains(box),room=!!box.dataset.room;
     const live=()=>box.isConnected&&(inCv?!$('cv').hidden:box.offsetParent!==null)&&(!det||det.open);
     let tk=0,cur=0;
     if(det)det.addEventListener('toggle',()=>{if(det.open)show(cur);else tk++});
     function show(i){
       cur=i;
-      const s=st[i],my=++tk,msg=s.ball==='msg',plan=s.ball==='plan';  // plan：まだ起きていない予定（点線の封筒）
+      const s=st[i],my=++tk,msg=s.ball==='msg',plan=s.ball==='plan';
       box.querySelectorAll('.figrow button').forEach((b,j)=>{
         b.classList.toggle('on',j===i);
         b.setAttribute('aria-pressed',j===i?'true':'false')
@@ -1636,7 +1561,7 @@ function initFigs(root){
         put(B.x,B.y,lb,pick(B,lb));
         return
       }
-      let li=0,t0=0,lo=null,fp=null;  // fp：地下室の部屋の図で、その区間の札を置いておく位置。lo：札のずれ。同じ字の札が続く区間のまとまりごとに、まとまりの最後の行き先で1回だけ選ぶ（境目でも跳ばない）
+      let li=0,t0=0,lo=null,fp=null;
       function fr(ts){
         if(my!==tk||!live())return;
         if(!t0){
@@ -1668,7 +1593,6 @@ function initFigs(root){
     show(0)
   })
 }
-// ---- カードの画面（上に重ねて出す。場面から開いたときは、そのあいだ一時停止する）
 let cvBack=null,cvFromScene=false,cvWasPaused=false;
 function quizHtml(q,i,id){
   const a=q.a.length>1?'<ol>'+q.a.map(x=>'<li>'+md(x)+'</li>').join('')+'</ol>':'<div>'+md(q.a[0])+'</div>';
@@ -1682,8 +1606,6 @@ function quizHtml(q,i,id){
     (FIG[id]&&figAnswers(FIG[id]).some(a=>a.q===i+1)?figHtml(id,'a'+(i+1)):'')+
     '</div></details></div>'
 }
-// カードの画面の中のリンクで別のカード・初期知識へ移ったときに、戻る先を積んでおく（2026-11-15。土台へのリンクから戻れるように）。
-// keep：積んだ戻る先を残すか（画面の中のリンクと「戻る」から開くときだけ true。一覧や場面から開くときは空にする）
 let cvCur=null,cvStack=[];
 function openCard(id,from,keep){
   const bx=BX[id],c=CARDS[id]||(bx&&[bx[0],'',bx[1]]);
@@ -1750,7 +1672,7 @@ $('cv').addEventListener('click',e=>{
 function buildMenu(){
   const T=$('mtree');
   T.innerHTML='';
-  const onO=$('ouchi').style.display===''||$('chika').style.display==='';  // おうち・地下室の1ページでは、どの行にも印を付けない
+  const onO=$('ouchi').style.display===''||$('chika').style.display==='';
   const cur=$('home').style.display===''||onO?null:(sc&&sc.scene);
   $('mhome').classList.toggle('on',!cur&&!onO);
   [...new Set(SCENES.map(s=>s.group))].sort().forEach(g=>{
@@ -1811,7 +1733,7 @@ document.addEventListener('keydown',e=>{
 });
 function route(){
   const id=location.hash.slice(1);
-  if(ouchiBack&&$('ouchi').style.display!=='none')ouchiY[ouchiBack]=scrollY;  // 家の1ページを離れるときの位置を覚える
+  if(ouchiBack&&$('ouchi').style.display!=='none')ouchiY[ouchiBack]=scrollY;
   closeCard(true);
   if(!id||id==='home'){
     const back=ouchiBack,cb=chikaBack;
@@ -1820,7 +1742,6 @@ function route(){
     showHome();
     if(back)setHomeTab('ouchi');
     if(cb)setHomeTab('chika');
-    // おうち・地下室の1ページから戻ったら、その家・扉を画面に入れる
     const h=back&&$('houses').querySelector('.house[data-buddy="'+back+'"]')||cb&&$('chika-doors').querySelector('.door[data-room="'+cb+'"]');
     if(h){
       h.scrollIntoView({block:'center'});
@@ -1828,7 +1749,7 @@ function route(){
     }
     return
   }
-  if(id==='ouchi'||id==='chika'){  // ☰ の「みんなのおうち」「攻撃手法の地下室」
+  if(id==='ouchi'||id==='chika'){
     ouchiBack=null;
     chikaBack=null;
     showHome();
