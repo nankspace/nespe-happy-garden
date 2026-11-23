@@ -48,6 +48,8 @@ button.on{background:var(--accent-bg);color:var(--accent);border-color:var(--acc
 input[type=range]{accent-color:#378ADD}
 .gd{cursor:pointer;outline:none}
 .gd:hover .bub,.gd:focus-visible .bub{stroke:#378ADD;stroke-width:2.4}
+.gtag{fill:#888780}
+.gw{fill:#185FA5;cursor:pointer}.gw.gh{font-weight:600}.gw:hover{fill:#0C447C;text-decoration:underline}
 @media (prefers-reduced-motion:no-preference){.gd{transition:transform .25s}.gd:hover,.gd:focus-visible{transform:translateY(-5px)}}
 .brand a{color:inherit;text-decoration:none}
 .hb{font-size:17px;line-height:1;padding:6px 10px;margin-right:10px;vertical-align:2px}
@@ -261,7 +263,7 @@ button.shh:hover,button.shh:focus-visible{color:var(--accent);border-color:var(-
 <div class="brand" id="brand"><button id="mbtn" class="hb" aria-label="場面の一覧を開く" aria-expanded="false" aria-controls="menu">☰</button><a href="#home">ネスペのハッピーガーデン</a><small>科目B 構造の基礎入れ｜経路を見てみよう</small><button id="sbtn" class="sbtn" aria-label="ガーデンの中を探す" aria-expanded="false" aria-controls="sfield">🔍</button><div class="sfield" id="sfield" role="search"><input id="sq" type="search" placeholder="🔍 ガーデンの中を探す（例：OSPF コスト）" aria-label="ガーデンの中を探す" aria-controls="sres" autocomplete="off" spellcheck="false" enterkeyhint="search"><div id="sres" class="sres" role="region" aria-label="探した結果" hidden></div></div></div>
 <div id="scrim" class="scrim"></div><nav id="menu" class="menu" aria-label="場面の一覧"><div class="mh"><span>場面の一覧</span><button id="mclose" aria-label="一覧を閉じる">✕ 閉じる</button></div><a id="mhome" class="mi top" href="#home">🌱 ガーデン（はじめの画面）</a><a id="mcards" class="mi top" href="#cards">📇 カード一覧（問題つき）</a><a id="mouchi" class="mi top" href="#ouchi">🏠 みんなのおうち</a><a id="mchika" class="mi top" href="#chika">🕳️ 攻撃手法の地下室</a><div id="mtree"></div></nav>
 <div id="cvscrim" class="scrim cvs"></div><div id="cv" class="cv" role="dialog" aria-modal="true" aria-labelledby="cv-title" hidden><div class="cvh"><div><div id="cv-sub" class="cv-sub"></div><div id="cv-title" class="cv-title"></div></div><button id="cvclose" aria-label="カードを閉じる">✕ 閉じる</button></div><div id="cv-body"></div></div>
-<div id="home" style="display:none"><div class="card" id="basics" style="margin-bottom:12px"></div><div class="card" style="padding:8px 8px 4px"><div class="gtabs" id="gtabs" role="tablist" aria-label="ガーデン・みんなのおうち・攻撃手法の地下室"><button role="tab" id="tab-garden" aria-controls="pane-garden">🌱 ガーデン<small>（まとまりの流れ）</small></button><button role="tab" id="tab-ouchi" aria-controls="houses">🏠 みんなのおうち<small>（系統ごとの覚えること）</small></button><button role="tab" id="tab-chika" aria-controls="chika-doors">🕳️ <span class="tl">攻撃手法の</span>地下室<small>（攻撃の手口）</small></button></div><div id="pane-garden" role="tabpanel" aria-labelledby="tab-garden"><svg id="garden" width="100%" viewBox="0 0 900 520" role="img" aria-label="ガーデン：まとまりを選ぶ"></svg><div style="font-size:13px;color:var(--sub);padding:2px 8px 6px">キャラか吹き出しを押すと、そのまとまりのカード一覧へ移ります。まとまりの流れを動く絵で見る「場面」は、これから足します</div></div><div id="houses" role="tabpanel" aria-labelledby="tab-ouchi" hidden></div><div id="chika-doors" role="tabpanel" aria-labelledby="tab-chika" hidden></div></div><div class="card" id="cardlist" style="margin-top:12px"><div class="clh"><span id="cl-title">カード一覧</span><span class="row" id="cl-filter" style="margin:0"></span></div><div class="legend" style="margin:0 0 4px">カードを押すと、仕組みの説明（先に読む）と、そのカードで本番に聞かれる形の問題が開きます。答えは「答えを見る」を押すまで隠れています。</div><div id="cl-body"></div></div></div>
+<div id="home" style="display:none"><div class="card" id="basics" style="margin-bottom:12px"></div><div class="card" style="padding:8px 8px 4px"><div class="gtabs" id="gtabs" role="tablist" aria-label="ガーデン・みんなのおうち・攻撃手法の地下室"><button role="tab" id="tab-garden" aria-controls="pane-garden">🌱 ガーデン<small>（まとまりの流れ）</small></button><button role="tab" id="tab-ouchi" aria-controls="houses">🏠 みんなのおうち<small>（系統ごとの覚えること）</small></button><button role="tab" id="tab-chika" aria-controls="chika-doors">🕳️ <span class="tl">攻撃手法の</span>地下室<small>（攻撃の手口）</small></button></div><div id="pane-garden" role="tabpanel" aria-labelledby="tab-garden"><svg id="garden" width="100%" viewBox="0 0 900 620" role="img" aria-label="ガーデン：まとまりを選ぶ"></svg><div style="font-size:13px;color:var(--sub);padding:2px 8px 6px">キャラか吹き出しを押すと、そのまとまりのカード一覧へ移ります。吹き出しの下の段の語（#DNS など）を押すと、その語でガーデンの中を探します。まとまりの流れを動く絵で見る「場面」は、これから足します</div></div><div id="houses" role="tabpanel" aria-labelledby="tab-ouchi" hidden></div><div id="chika-doors" role="tabpanel" aria-labelledby="tab-chika" hidden></div></div><div class="card" id="cardlist" style="margin-top:12px"><div class="clh"><span id="cl-title">カード一覧</span><span class="row" id="cl-filter" style="margin:0"></span></div><div class="legend" style="margin:0 0 4px">カードを押すと、仕組みの説明（先に読む）と、そのカードで本番に聞かれる形の問題が開きます。答えは「答えを見る」を押すまで隠れています。</div><div id="cl-body"></div></div></div>
 <div id="ouchi" style="display:none"></div><div id="chika" style="display:none"></div><div class="sel" id="selwrap"><div class="row" id="groups"></div><div class="row" id="scenes"></div></div>
 <div class="layout" id="layout">
 <div class="left">
@@ -883,23 +885,56 @@ function openScene(id){
   $('modes').appendChild(b)
 });
 $('pause').onclick=()=>setPause(!paused);
-const GARDEN={'1':['sw',150,402,'L2 スイッチ'],'2':['net',300,250,'ルータと WAN'],'3':['srv',450,402,'DNS・Web サーバ'],
-  '4':['fw',620,250,'ファイアウォール'],'5':['pc',760,402,'運用の PC']};
+const GARDEN={'1':['sw',150,560,'L2 スイッチ'],'2':['net',300,310,'ルータと WAN'],'3':['srv',450,560,'DNS・Web サーバ'],
+  '4':['fw',620,310,'ファイアウォール'],'5':['pc',760,560,'運用の PC']};
 const BUDDY={'S02':['mail','メールちゃん','わたしの見た目、おぼえてほしいな','メールの覚えること'],
   'S03':['cert','証明書ちゃん','わたしの欄、1つずつ確かめてね','証明書の見た目'],
   'S09':['resp','応答ちゃん','わたし、ブラウザにお願いしてるの','HTTP の応答の見た目']};
+const GTAG={'1':[['N01','物理層',['ケーブル','PoE']],['N02','イーサネット',['L2 スイッチ','リンクアグリゲーション']],
+    ['N03','VLAN・STP',['タグ VLAN','ルートブリッジ','L3 スイッチ'],'VLAN STP'],['N04','無線 LAN',['規格','ローミング','暗号化']]],
+  '2':[['N05','IP アドレス',['サブネットマスク','特別なアドレス','MTU']],['N06','ARP・ICMP・DHCP',['MAC アドレス','traceroute','DHCP リレー'],'ARP DHCP'],
+    ['N07','経路制御',['デフォルトゲートウェイ','スタティックルート','OSPF']],['N08','WAN',['BGP','IP-VPN']],['N09','NAT',['NAPT','ポートフォワード']]],
+  '3':[['N10','TCP・UDP',['ポート番号','接続の確立','再送'],'TCP UDP'],['N11','DNS',['リソースレコード','リゾルバ','振分け']],['N12','メール',['SMTP','SPF']],
+    ['N13','Web',['HTTP','フォワードプロキシ','自動設定']],['N14','音声・映像',['マルチキャスト']]],
+  '4':[['N15','FW・IDS',['フィルタリングルール','ステートフルインスペクション','DDoS'],'FW IDS'],['N16','暗号・PKI',['証明書の検証','ハンドシェイク','TLS の終端'],'暗号 PKI'],
+    ['N17','VPN',['GRE','SSL-VPN','IPsec']],['N18','認証',['クライアント証明書','多要素','シングルサインオン']]],
+  '5':[['N19','冗長化・負荷分散',['VRRP','ヘルスチェック','単一障害点'],'冗長化 負荷分散'],['N20','性能',['必要帯域','伝送時間','QoS']],
+    ['N21','運用',['切り分け','SNMP','syslog']],['N22','仮想化・SDN',['クラウド','OpenFlow'],'仮想化 SDN']]};
+const GTF=10.5,GTL=14,GTMAX=250;
+function gtW(s){
+  let w=0;
+  for(const c of s)w+=c===' '?.32:c.charCodeAt(0)>=128?1:/[A-Z0-9#]/.test(c)?.66:.56;
+  return w*GTF
+}
+function gtLines(tags){
+  const L=[];
+  tags.forEach(([k,hd,ws,hq])=>{
+    const u=ws.map((w,i)=>[[w,w,k],[i<ws.length-1?'・':'）',null]]);
+    let cur=[['#'+hd,hq||hd,k]].concat(ws.length?[['（',null]].concat(u.shift()):[]);
+    u.forEach(p=>{
+      if(cur.concat(p).reduce((s,[t])=>s+gtW(t),0)<=GTMAX)cur=cur.concat(p);
+      else{
+        L.push(cur);
+        cur=p
+      }
+    });
+    L.push(cur)
+  });
+  return L
+}
+const GH=620;
 function scenesOf(g){
   return SCENES.filter(s=>s.group===g)
 }
 function drawGarden(){
   const G=$('garden');
   if(G.childNodes.length)return;
-  el('rect',{x:0,y:0,width:900,height:520,rx:16,fill:'#EAF4FB'},G);
+  el('rect',{x:0,y:0,width:900,height:GH,rx:16,fill:'#EAF4FB'},G);
   el('circle',{cx:820,cy:70,r:34,fill:'#FAC775'},G);
   [[120,70,46],[170,62,34],[560,92,40],[602,86,28]].forEach(([cx,cy,r])=>el('circle',{cx,cy,r,fill:'#FFFFFF',opacity:.9},G));
-  el('path',{d:'M0 200 Q450 140 900 200 L900 520 L0 520Z',fill:'#B9DE8F'},G);
-  el('path',{d:'M0 330 Q450 290 900 330 L900 520 L0 520Z',fill:'#A6D27A'},G);
-  el('path',{d:'M430 520 Q470 420 455 330 Q445 260 470 200',
+  el('path',{d:'M0 200 Q450 140 900 200 L900 '+GH+' L0 '+GH+'Z',fill:'#B9DE8F'},G);
+  el('path',{d:'M0 410 Q450 370 900 410 L900 '+GH+' L0 '+GH+'Z',fill:'#A6D27A'},G);
+  el('path',{d:'M430 '+GH+' Q470 510 455 410 Q445 300 470 200',
     fill:'none',stroke:'#EADBB8','stroke-width':26,'stroke-linecap':'round',opacity:.9},G);
   for(let x=20;x<900;x+=34){
     el('line',{x1:x,y1:188-Math.sin(x/900*Math.PI)*58,x2:x,y2:212-Math.sin(x/900*Math.PI)*58,
@@ -910,8 +945,8 @@ function drawGarden(){
     el('circle',{cx:x,cy:y-26,r:30,fill:'#5DCAA5'},G);
     el('circle',{cx:x-14,cy:y-12,r:20,fill:'#1D9E75',opacity:.6},G)
   });
-  [[95,470,'#ED93B1'],[250,500,'#FAC775'],[330,455,'#F0997B'],[585,485,'#ED93B1'],[680,505,'#FAC775'],
-    [855,470,'#F0997B'],[210,330,'#FFFFFF'],[700,340,'#FFFFFF'],[40,380,'#FAC775'],[880,350,'#ED93B1']].forEach(([x,y,c])=>{
+  [[95,570,'#ED93B1'],[250,600,'#FAC775'],[330,555,'#F0997B'],[585,585,'#ED93B1'],[680,605,'#FAC775'],
+    [855,570,'#F0997B'],[210,410,'#FFFFFF'],[700,420,'#FFFFFF'],[40,480,'#FAC775'],[880,450,'#ED93B1']].forEach(([x,y,c])=>{
     [[0,-5],[5,0],[0,5],[-5,0]].forEach(([dx,dy])=>el('circle',{cx:x+dx,cy:y+dy,r:4,fill:c},G));
     el('circle',{cx:x,cy:y,r:3,fill:'#EF9F27'},G)
   });
@@ -921,11 +956,12 @@ function drawGarden(){
   Object.entries(GARDEN).forEach(([g,[ty,x,y,name]])=>{
     const list=scenesOf(g);
     const nums=list.map(s=>s.scene);
-    const a=el('g',{class:'gd',tabindex:'0',role:'button','aria-label':'まとまり'+g+' '+GT[g]+(nums.length?' の場面へ':' のカードへ')},G);
+    const a=el('g',{class:'gd','data-g':g,tabindex:'0',role:'button','aria-label':'まとまり'+g+' '+GT[g]+(nums.length?' の場面へ':' のカードへ')},G);
     el('ellipse',{cx:x,cy:y+30,rx:34,ry:8,fill:'#7FB85A',opacity:.55},a);
     drawNode('g'+g,{x,y,type:ty,label:name},a);
-    const bw=184,bh=74,bx=x-bw/2,by=y-HALF[ty][1]-bh-22;
-    el('rect',{class:'bub',x:bx,y:by,width:bw,height:bh,rx:16,fill:'#FFFFFF',stroke:'#B4B2A9','stroke-width':1.2},a);
+    const tl=gtLines(GTAG[g]||[]),tw=Math.max(0,...tl.map(l=>l.reduce((s,[t])=>s+gtW(t),0)));
+    const bw=Math.max(184,Math.ceil(tw)+28),bh=tl.length?84+GTL*tl.length:74,bx=x-bw/2,by=y-HALF[ty][1]-bh-22;
+    const bub=el('rect',{class:'bub',x:bx,y:by,width:bw,height:bh,rx:16,fill:'#FFFFFF',stroke:'#B4B2A9','stroke-width':1.2},a);
     el('path',{d:'M'+(x-9)+' '+(by+bh-1)+' L'+x+' '+(by+bh+14)+' L'+(x+9)+' '+(by+bh-1)+'Z',
       fill:'#FFFFFF',stroke:'#B4B2A9','stroke-width':1.2},a);
     el('rect',{x:x-8,y:by+bh-3,width:16,height:4,fill:'#FFFFFF'},a);
@@ -937,8 +973,35 @@ function drawGarden(){
     const t3=txt(x,by+65,!nums.length?'カード '+Object.keys(CARDS).filter(id=>(KEITO.find(k=>k[0]===id.slice(0,3))||[])[2]===g).length+'枚 ▶':'場面 '+(nums.length>1?nums[0]+'〜'+nums[nums.length-1]:nums[0])+'（'+nums.length+'つ） ▶',
       '#5F5E5A','middle',a);
     t3.setAttribute('font-size','12');
+    const sep=tl.length&&el('line',{x1:bx+14,y1:by+75,x2:bx+bw-14,y2:by+75,stroke:'#D3D1C7','stroke-width':1,'stroke-dasharray':'3 3'},a);
+    const tt=tl.map((ln,i)=>{
+      const t=el('text',{x,y:by+90+i*GTL,'text-anchor':'middle','font-size':GTF,class:'gtag'},a);
+      ln.forEach(([s,q,k])=>{
+        const e=el('tspan',q?{class:'gw'+(s[0]==='#'?' gh':''),'data-q':q,'data-k':k}:{},t);
+        e.textContent=s
+      });
+      return t
+    });
+    const mw=Math.max(0,...tt.map(t=>t.getComputedTextLength()));
+    if(mw>0){
+      const w2=Math.max(184,Math.ceil(mw)+28);
+      bub.setAttribute('x',x-w2/2);
+      bub.setAttribute('width',w2);
+      if(sep){
+        sep.setAttribute('x1',x-w2/2+14);
+        sep.setAttribute('x2',x+w2/2-14)
+      }
+    }
     const go=()=>{if(list.length){location.hash=list[0].scene;return}location.hash='cards';setTimeout(()=>{const h=$('clm-'+g);if(h)h.scrollIntoView()},60)};
-    a.addEventListener('click',go);
+    a.addEventListener('click',e=>{
+      const w=e.target.closest&&e.target.closest('.gw');
+      if(!w){
+        go();
+        return
+      }
+      e.stopPropagation();
+      sAsk(w.getAttribute('data-q'))
+    });
     a.addEventListener('keydown',e=>{
       if(e.key==='Enter'||e.key===' '){
         e.preventDefault();
@@ -1939,6 +2002,17 @@ function sFocusQuiet(){
   sQuiet=true;
   $('sq').focus({preventScroll:true});
   sQuiet=false
+}
+function sAsk(q){
+  $('sq').value=q;
+  if(matchMedia('(max-width:600px)').matches){
+    $('brand').classList.add('son');
+    $('sbtn').setAttribute('aria-expanded','true')
+  }
+  clearTimeout(sTimer);
+  sRender();
+  if(matchMedia('(pointer:fine)').matches)sFocusQuiet();
+  if($('brand').getBoundingClientRect().top<0)window.scrollTo({top:0})
 }
 function sGo(e,from){
   if(e.k==='card'||e.k==='bx'){
